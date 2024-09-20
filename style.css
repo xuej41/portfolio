@@ -12,6 +12,45 @@ body {
     color: #333;
 }
 
+img {
+    height: 70px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: green;
+}
+
+button:hover {
+    background-color: rgb(0, 80, 0);
+}
+
+/* Dynamic Text */
+#dynamic-text {
+    border-right: 2px solid white;
+    padding-right: 5px;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
 /* Navigation */
 nav {
     background-color: #333;
@@ -89,6 +128,12 @@ nav ul li a:hover {
     padding: 50px;
     background-color: #fff;
     text-align: center;
+    font-size: larger;
+}
+
+.aboutText {
+    text-align: start;
+    padding-left: 70px;
 }
 
 .about h2 {
