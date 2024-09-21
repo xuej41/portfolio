@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+
+
 }
 
 img {
@@ -84,10 +86,16 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url(images/me3.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(images/me3.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    /* background-repeat: no-repeat;
+    tweak these properties and see what happens to the img */
+    background-attachment: fixed; /*makes the image stay in place while you scroll */
+
 }
 
 .hero-content {
