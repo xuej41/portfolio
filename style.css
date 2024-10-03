@@ -254,7 +254,6 @@ nav ul li a:hover::after {
     filter: brightness(1);
 }
 
-
 .project-card p {
     font-size: 0.9rem;
     color: #888;
