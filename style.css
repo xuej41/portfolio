@@ -194,18 +194,78 @@ nav ul li a:hover::after {
 }
 
 /* Projects Section */
-.projects {
+#projects {
     padding: 50px;
-    background-color: #e9e9e9;
+    background-color: #555; /* Light gray background */
     text-align: center;
 }
 
-.projects h2 {
-    margin-bottom: 20px;
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
 }
 
-.project {
-    margin-bottom: 30px;
+/* Grid Container */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    max-width: 900px; /* Disable this to make projects massive */
+    margin: 0 auto;
+}
+
+/* Project Card Styles */
+.project-card {
+    text-align: left;
+    background-color: #222;
+    padding: 20px;
+    border: 2px solid #555;
+    transition: all 0.3s ease;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card a {
+    width: 10px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.project-card-links img{
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    filter: brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.project-card-links img:hover{
+    filter: brightness(1);
+}
+
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+    font-family: 'Poppins';
+}
+
+/* Hover effect for cards */
+.project-card:hover {
+    border: 2px solid grey;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
 }
 
 /* Skills Section */
@@ -241,6 +301,7 @@ nav ul li a:hover::after {
 }
 
 .skill-item span {
+    font-family: 'Poppins';
     font-size: 16px;
     color: grey;
 }
@@ -250,59 +311,7 @@ nav ul li a:hover::after {
     filter: grayscale();
 }
 
-/* Projects Section */
-#projects {
-    padding: 50px;
-    background-color: #555; /* Light gray background */
-    text-align: center;
-}
 
-#projects h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-/* Grid Container */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
-    max-width: 900px; /* Limit grid width */
-    margin: 0 auto; /* Center the grid */
-}
-
-/* Project Card Styles */
-.project-card {
-    background-color: #222;
-    padding: 20px;
-    border: 2px solid #555;
-    transition: all 0.3s ease;
-}
-
-.project-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.project-card h3 {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* Hover effect for cards */
-.project-card:hover {
-    border: 2px solid grey;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
-}
 
 /* Contact Section */
 .contact {
@@ -341,5 +350,6 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
+    font-family: 'Poppins';
     padding: 10px;
 }
