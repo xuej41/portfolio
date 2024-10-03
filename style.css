@@ -14,7 +14,15 @@ body {
     line-height: 1.6;
     background-color: #111;
     color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease-in; /* 2 seconds fade-in effect */
 }
+
+/* Final state - fully visible (opacity 1) */
+body.fade-in {
+    opacity: 1;
+}
+
 
 img {
     height: 70px;
@@ -119,8 +127,8 @@ nav ul li a:hover::after {
     /* background-repeat: no-repeat;
     tweak these properties and see what happens to the img */
     background-attachment: fixed; /*makes the image stay in place while you scroll */
-
 }
+
 
 .hero-content {
     text-align: center;
@@ -241,6 +249,61 @@ nav ul li a:hover::after {
     cursor: pointer;
     filter: grayscale();
 }
+
+/* Projects Section */
+#projects {
+    padding: 50px;
+    background-color: #555; /* Light gray background */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Grid Container */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    max-width: 900px; /* Limit grid width */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: #222;
+    padding: 20px;
+    border: 2px solid #555;
+    transition: all 0.3s ease;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Hover effect for cards */
+.project-card:hover {
+    border: 2px solid grey;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
 /* Contact Section */
 .contact {
     padding: 50px;

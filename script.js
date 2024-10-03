@@ -1,3 +1,11 @@
+//Webpage Fade-in Effect
+window.onload = function() {
+    document.body.classList.add('fade-in');
+};
+
+
+
+//Typewriter Function
 const words = ["Web Developer", "Computer Engineer", "Mechanic", "Hardware Enthusiast"];
 let wordIndex = 0;
 let charIndex = 0;
@@ -37,11 +45,12 @@ function typeWriter() {
         }
     }
 }
-
 // Start the typing effect on page load
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(typeWriter, typingSpeed);
 });
+
+
 
 
 // Contact Form Submission (basic functionality)
