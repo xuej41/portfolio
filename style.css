@@ -31,17 +31,17 @@ img {
 
 a {
     text-decoration: none;
-    color: white;
 }
 
 button {
     text-decoration: none;
     background-color: transparent;
     border: 2px solid #007BFF;
-    padding: 15px 35px;
+    padding: 18px 40px;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -64,38 +64,66 @@ button:hover {
 }
 
 
+
 /* Navigation */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav {
     background-color: #333;
-    padding: 10px;
-    margin-right: 10px;
+    padding: 2px;
+    margin-top: 50px;
     width: 100%;
-    position: fixed;
+    position:fixed;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    margin: 0px;
+    padding-left: 30px; /* Adjusts how far the navbar elements are from the edge of the screen */
+    padding-right: 50px;
 }
 
-nav ul li a {
+.website-name {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    /* color: white; */
+    margin-right: auto; /* Pushes the website name to the left */
+    transition: all 0.3s ease;
+}
+
+.website-name:hover {
+    filter: drop-shadow(0px 0px 10px grey);
+    color: aqua;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: auto; /* Pushes the rest of the links to the right */
+}
+
+.nav-item { /*styling for each button */
     text-decoration: none;
     font-weight: bold;
     background-color: transparent;
     padding: 10px 20px;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     position: relative; /* Add this to make the pseudo-element correctly positioned */
 }
 
-nav ul li a:hover {
-    transition-duration: 0.5s;
+.nav-item:hover {
     color: #007BFF;
 }
 
 /* Sliding Underline Effect */
-nav ul li a::after {
+.nav-item::after {
     content: '';
     position: absolute;
     left: 0;
@@ -109,10 +137,12 @@ nav ul li a::after {
 }
 
 /* On hover, make the underline slide into view */
-nav ul li a:hover::after {
+.nav-item:hover::after {
     transform: scaleX(1); /* Expand to full width */
     transform-origin: left;
 }
+
+
 
 /* Hero Section */
 .hero {
@@ -164,6 +194,8 @@ nav ul li a:hover::after {
     width: auto;
 }
 
+
+
 /* About Section */
 .about {
     padding: 50px;
@@ -172,9 +204,11 @@ nav ul li a:hover::after {
     font-size: larger;
 }
 
-.aboutText {
-    text-align: start;
-    padding-left: 70px;
+.about-text {
+    width: 80%; /* You can adjust the width */
+    max-width: 1000px; /* Ensure it doesn't grow too wide */
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Left-align the text within the container */
 }
 
 .about h2 {
@@ -192,6 +226,8 @@ nav ul li a:hover::after {
     padding: 20px;
     filter: drop-shadow(0px 0px 10px grey);
 }
+
+
 
 /* Projects Section */
 #projects {
@@ -213,6 +249,12 @@ nav ul li a:hover::after {
     gap: 20px; /* Space between grid items */
     max-width: 900px; /* Disable this to make projects massive */
     margin: 0 auto;
+}
+
+@media (max-width: 1000px) { /* Stack items into 1 column for mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Project Card Styles */
@@ -266,6 +308,8 @@ nav ul li a:hover::after {
     border: 2px solid grey;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
 }
+
+
 
 /* Skills Section */
 .skills {
@@ -343,6 +387,8 @@ nav ul li a:hover::after {
 .contact button:hover {
     background-color: #0056b3;
 }
+
+
 
 /* Footer */
 footer {
