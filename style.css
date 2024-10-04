@@ -31,6 +31,8 @@ img {
 
 a {
     text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 button {
@@ -70,6 +72,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
 }
 
 nav {
@@ -77,30 +80,27 @@ nav {
     padding: 2px;
     margin-top: 50px;
     width: 100%;
-    position:fixed;
+    position: fixed;
 }
 
-nav ul {
-    list-style: none;
+ul {
+    list-style: none; /* removes bullet points */
     display: flex;
+    align-items: center; /* aligns nav-items between the top and bottom of the navbar */
     margin: 0px;
     padding-left: 30px; /* Adjusts how far the navbar elements are from the edge of the screen */
     padding-right: 50px;
 }
 
 .website-name {
-    text-decoration: none;
     font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    /* color: white; */
     margin-right: auto; /* Pushes the website name to the left */
-    transition: all 0.3s ease;
 }
 
-.website-name:hover {
-    filter: drop-shadow(0px 0px 10px grey);
-    color: aqua;
+.website-name a:hover {
+    color: yellowgreen;
+    filter: invert(1) brightness(1.5) drop-shadow(0px 0px 10px grey);
+    transition-duration: 1s;
 }
 
 .nav-links {
@@ -109,16 +109,13 @@ nav ul {
 }
 
 .nav-item { /*styling for each button */
-    text-decoration: none;
-    font-weight: bold;
-    background-color: transparent;
     padding: 10px 20px;
-    color: white;
     font-size: 18px;
     position: relative; /* Add this to make the pseudo-element correctly positioned */
+    transition: all 0.3s ease;
 }
 
-.nav-item:hover {
+.nav-item a:hover {
     color: #007BFF;
 }
 
@@ -127,7 +124,7 @@ nav ul {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     width: 100%;
     height: 3px;
     background-color: #007BFF;
@@ -139,7 +136,6 @@ nav ul {
 /* On hover, make the underline slide into view */
 .nav-item:hover::after {
     transform: scaleX(1); /* Expand to full width */
-    transform-origin: left;
 }
 
 
@@ -176,24 +172,6 @@ nav ul {
     margin-bottom: 20px;
 }
 
-/* Removed the button in the hero section */
-.btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.gif {
-    height: 100px;
-    width: auto;
-}
-
 
 
 /* About Section */
@@ -219,7 +197,7 @@ nav ul {
 
 .social-item {
     padding: 10px;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; don't need, already initialized in a{} section */
 }
 
 .social-item:hover {
