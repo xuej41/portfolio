@@ -1,3 +1,3 @@
 # Personal Portfolio Website
-My offical personal portfolio website, deployed to Vercel with a custom domain.
-Feel free to check it out at [joshx.tech](https://joshx.tech/)!
+My offical personal portfolio website, deployed to Vercel with my custom domain.
+Check it out at [joshx.tech](https://joshx.tech/)!

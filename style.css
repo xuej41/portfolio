@@ -376,6 +376,12 @@ footer {
     padding: 10px;
 }
 
+.wp-block-cover.has-parallax, .wp-block-cover-image.has-parallax { /* Fix background image super zoomed in on Safari */
+    @supports (-webkit-touch-callout: inherit) {
+      background-attachment: scroll;
+    }
+  }
+
 @media (max-width: 1000px) { /* Fix formatting for mobile */
     ul {
         padding-left: 0px;
@@ -396,3 +402,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
