@@ -154,10 +154,7 @@ ul {
     background-image: url(images/me4.jpg);
     background-position: center;
     background-size: cover;
-    /* background-position: center; */
-    /* background-repeat: no-repeat;
-    tweak these properties and see what happens to the img */
-    background-attachment: fixed; /*makes the image stay in place while you scroll */
+    background-attachment: fixed; /* makes the image stay in place while you scroll */
 }
 
 
@@ -376,12 +373,6 @@ footer {
     padding: 10px;
 }
 
-.wp-block-cover.has-parallax, .wp-block-cover-image.has-parallax { /* Fix background image super zoomed in on Safari */
-    @supports (-webkit-touch-callout: inherit) {
-      background-attachment: scroll;
-    }
-  }
-
 @media (max-width: 1000px) { /* Fix formatting for mobile */
     ul {
         padding-left: 0px;
@@ -394,6 +385,9 @@ footer {
     .nav-item {
         padding: 0px 5px;
         font-size: 15px;
+    }
+    .hero {
+        background-attachment: scroll; /* Remove fixed background property, fixed makes image super zoomed in on IOS */
     }
     .social-item { /* Make all 4 social items fit together */
         padding: 5px;
