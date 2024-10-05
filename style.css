@@ -23,8 +23,12 @@ body.fade-in {
     opacity: 1;
 }
 
-
 img {
+    height: 50px;
+    width: auto;
+}
+
+.gif {
     height: 70px;
     width: auto;
 }
@@ -81,6 +85,7 @@ nav {
     margin-top: 50px;
     width: 100%;
     position: fixed;
+    z-index: 1; /*fixes the images appearing on top of the navbar when scrolling */
 }
 
 ul {
@@ -229,12 +234,6 @@ ul {
     margin: 0 auto;
 }
 
-@media (max-width: 1000px) { /* Stack items into 1 column for mobile */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Project Card Styles */
 .project-card {
     text-align: left;
@@ -271,7 +270,7 @@ ul {
 }
 
 .project-card-links img:hover{
-    filter: brightness(1);
+    filter: brightness(1.2);
 }
 
 .project-card p {
@@ -375,4 +374,25 @@ footer {
     text-align: center;
     font-family: 'Poppins';
     padding: 10px;
+}
+
+@media (max-width: 1000px) { /* Fix formatting for mobile */
+    ul {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding: 5px;
+    }
+    .website-name {
+        font-size: 1.5rem;
+    }
+    .nav-item {
+        padding: 0px 5px;
+        font-size: 15px;
+    }
+    .social-item { /* Make all 4 social items fit together */
+        padding: 5px;
+    }
+    .projects-grid { /* Make projects grid one column only */
+        grid-template-columns: 1fr;
+    }
 }
