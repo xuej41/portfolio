@@ -6,7 +6,7 @@ window.onload = function() {
 
 
 //Typewriter Function
-const words = ["Web Developer", "Computer Engineer", "Mechanic", "Hardware Enthusiast"];
+const words = ["Web Developer.", "Computer Engineer.", "Mechanic.", "Hardware Enthusiast."];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
