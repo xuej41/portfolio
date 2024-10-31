@@ -11,8 +11,8 @@ let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const typingSpeed = 150;
-const deletingSpeed = 100;
-const delayBetweenWords = 1000; // Delay between words
+const deletingSpeed = 50;
+const delayBetweenWords = 1500; // Delay between words
 
 function typeWriter() {
     const dynamicText = document.getElementById("dynamic-text");
