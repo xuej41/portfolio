@@ -222,6 +222,12 @@ ul {
     color: #fff;
 }
 
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Grid Container */
 .projects-grid {
     display: grid;
@@ -283,6 +289,19 @@ ul {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
 }
 
+/* ENABLE LATER */
+/* Hidden project cards and load more button */
+/*
+.hidden {
+    display: none;
+}
+
+Load More button sizing
+#view-more {
+    margin-top: 40px;
+    padding: 15px 150px;
+}
+*/
 
 
 /* Skills Section */

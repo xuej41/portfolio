@@ -52,6 +52,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// Load more projects function
+function viewMoreProjects() {
+    // Select all hidden project cards
+    const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+    
+    // Display the hidden projects
+    hiddenProjects.forEach(project => {
+        project.classList.remove('hidden');
+    });
+
+    // Optionally, hide the Load More button after revealing all projects
+    document.getElementById('view-more').style.display = 'none';
+}
+
+
 
 // Contact Form Submission (basic functionality)
 document.getElementById("contact-form").addEventListener("submit", function (event) {
